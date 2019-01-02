@@ -16,7 +16,7 @@ let MMOC = (function() {
             // file but with the ws protocol
             if(!wsurl){
                 wsurl="//" + document.domain + ":" + location.port + "/ws";
-                if (location.protocol === "https") wsurl = "wss:" + wsurl;
+                if (location.protocol === "https:") wsurl = "wss:" + wsurl;
                 else wsurl = "ws:" + wsurl;
             }
             this.ws = new WebSocket(wsurl);
