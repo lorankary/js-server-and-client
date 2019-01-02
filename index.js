@@ -1,6 +1,7 @@
 // Import main express library
 const express = require('express');
 const expressWs = require('express-ws');
+const PORT = process.env.PORT || 8080;
 
 // Create express app and websockets middleware
 let websocketServer = expressWs(express());
@@ -46,9 +47,9 @@ app.ws('/ws', function(ws, req) {
     });
 });
 
-let host = process.env.MMOS_HOST || "localhost";
-let port = parseInt(process.env.MMOS_PORT) || 8080;
+// let host = process.env.MMOS_HOST || "localhost";
+// let port = parseInt(process.env.MMOS_PORT) || 8080;
 
-app.listen(port, host, function() {
-	console.log(`[+] Listening on ${host}:${port}`);
+app.listen(PORT, function() {
+	console.log(`[+] Listening on ${PORT}`);
 });
