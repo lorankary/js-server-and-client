@@ -4,19 +4,19 @@
   "description": "Alex K's JS version of express plus express-ws",
   "main": "index.js",
   "engines": {
-  "node": "10.x"
-    },
+    "node": "10.x"
+  },
   "scripts": {
-    "start": "node index.js",
+    "start": "node index.js"
   },
   "dependencies": {
     "express-ws": "^4.0.0",
     "express": "^4.15.2"
   },
   "keywords": [
-  "node",
-  "heroku",
-  "express"
-],
-"license": "MIT"
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
 }
