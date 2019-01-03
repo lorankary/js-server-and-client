@@ -50,8 +50,8 @@ app.ws('/ws', function(ws, req) {
 // let host = process.env.MMOS_HOST || "localhost";
 // let port = parseInt(process.env.MMOS_PORT) || 8080;
 
-console.log("process.env.HOST" + process.env.HOST);
-console.log("process.env.PORT" + process.env.PORT);
+console.log("process.env.HOST " + process.env.HOST);
+console.log("process.env.PORT " + process.env.PORT);
 
 app.listen(PORT, function() {
 	console.log(`[+] Listening on ${PORT}`);
