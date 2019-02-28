@@ -7,6 +7,8 @@ const PORT = process.env.PORT || 8080;
 let websocketServer = expressWs(express());
 let app = websocketServer.app;
 
+// console.log(websocketServer.getWss());
+
 // Data storage
 let DATA = {};
 
@@ -16,6 +18,10 @@ app.use(express.static('public'));
 // Websockets handler
 app.ws('/ws', function(ws, req) {
     let playerID;
+
+    // show the clients
+    // console.log(websocketServer.getWss().clients);
+
 
     // On message event
     ws.on('message', function(msg) {
